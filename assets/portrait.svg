@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-label="Ritika Kulkarni monogram">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1a18"/>
+      <stop offset="0.45" stop-color="#12241f"/>
+      <stop offset="1" stop-color="#0b1218"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7ee0c4"/>
+      <stop offset="0.55" stop-color="#5ec8f0"/>
+      <stop offset="1" stop-color="#9d8cff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="55%">
+      <stop offset="0" stop-color="#7ee0c4" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0b0f0e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <circle cx="450" cy="360" r="320" fill="url(#glow)"/>
+  <circle cx="450" cy="430" r="210" fill="none" stroke="url(#ink)" stroke-opacity="0.28" stroke-width="2"/>
+  <circle cx="450" cy="430" r="168" fill="none" stroke="url(#ink)" stroke-opacity="0.16" stroke-width="1"/>
+  <text x="450" y="470" text-anchor="middle" font-family="Sora, Inter, system-ui, sans-serif" font-size="220" font-weight="700" fill="url(#ink)" letter-spacing="-8">RK</text>
+  <text x="450" y="560" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="28" fill="#7ee0c4" fill-opacity="0.7" letter-spacing="6">AUTOSAR BSW</text>
+</svg>
