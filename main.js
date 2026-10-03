@@ -56,7 +56,7 @@
   var SITE = {
     email: "ritikakulkarni.rcr@gmail.com",
     phone: "+91 84313 99085",
-    github: "https://github.com/Ritikakulkarni14",
+    github: "https://github.com/ritika-kulkarni",
     linkedin: "https://www.linkedin.com/in/ritika-kulkarni-3937851b4",
     resume: "Ritika_Kulkarni_resume.pdf"
   };
@@ -1220,7 +1220,7 @@
       },
       {
         group: "Elsewhere",
-        label: "GitHub — Ritikakulkarni14",
+        label: "GitHub — ritika-kulkarni",
         icon: "external",
         run: function () {
           window.open(SITE.github, "_blank", "noopener");

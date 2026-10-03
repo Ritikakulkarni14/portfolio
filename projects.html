@@ -6,11 +6,11 @@
     <title>Projects — Ritika Kulkarni</title>
     <meta
       name="description"
-      content="AUTOSAR BSW projects by Ritika Kulkarni: MPC4 commercial-vehicle J1939 platform and Volkswagen USS-based parking ADAS (EVO_MBQBL & MEB_UNECE)."
+      content="Open-source AUTOSAR tooling by Ritika Kulkarni: DBC/ARXML validation, Trace32 crash analysis, SIL vECU harness, MISRA triage, and ASPICE continuous traceability."
     />
     <meta name="theme-color" content="#0b0f0e" />
     <meta name="color-scheme" content="dark light" />
-    <link rel="canonical" href="https://ritikakulkarni14.github.io/portfolio/projects.html" />
+    <link rel="canonical" href="https://ritika-kulkarni-portfolio.vercel.app/projects" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/favicon.svg" />
     <link rel="manifest" href="site.webmanifest" />
@@ -20,10 +20,10 @@
     <meta property="og:title" content="Projects — Ritika Kulkarni" />
     <meta
       property="og:description"
-      content="Production AUTOSAR Classic programs across commercial vehicles and ADAS parking."
+      content="AUTOSAR BSW tooling for validation, SIL testing, crash analysis, MISRA triage, and ASPICE traceability."
     />
-    <meta property="og:url" content="https://ritikakulkarni14.github.io/portfolio/projects.html" />
-    <meta property="og:image" content="https://ritikakulkarni14.github.io/portfolio/assets/banner.jpg" />
+    <meta property="og:url" content="https://ritika-kulkarni-portfolio.vercel.app/projects" />
+    <meta property="og:image" content="https://ritika-kulkarni-portfolio.vercel.app/assets/banner.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,6 +36,7 @@
 
     <script src="theme.js"></script>
     <script defer src="main.js"></script>
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   </head>
 
   <body>
@@ -109,12 +110,14 @@
       <section class="shell page-hero">
         <p class="eyebrow" data-reveal="fade">Projects</p>
         <h1 class="page-hero__title" data-split>
-          Production AUTOSAR work across
-          <span class="grad-text" data-split-atom>CV J1939 and ADAS parking</span>.
+          Open tooling for AUTOSAR delivery —
+          <span class="grad-text" data-split-atom>validation, SIL, and ASPICE</span>.
         </h1>
         <p class="lede" data-reveal>
-          Two Bosch programs that cover commercial-vehicle networking and ultrasonic parking assist —
-          filter by discipline, or hit
+          Five public repositories on
+          <a class="text-link" href="https://github.com/ritika-kulkarni" target="_blank" rel="noreferrer">github.com/ritika-kulkarni</a>
+          that automate DBC/ARXML checks, crash analysis, SIL regression, MISRA triage, and continuous
+          traceability. Filter by discipline, or hit
           <span class="kbd-combo"><kbd>⌘</kbd><kbd>K</kbd></span> to jump somewhere else.
         </p>
       </section>
@@ -122,157 +125,157 @@
       <section class="shell section" id="work" data-section="All work">
         <div class="filter-bar" data-filter-bar role="group" aria-label="Filter projects by discipline">
           <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="filter" type="button" data-filter="j1939" aria-pressed="false">J1939 / CV</button>
-          <button class="filter" type="button" data-filter="adas" aria-pressed="false">ADAS</button>
-          <button class="filter" type="button" data-filter="bsw" aria-pressed="false">BSW stack</button>
-          <button class="filter" type="button" data-filter="quality" aria-pressed="false">Quality &amp; safety</button>
+          <button class="filter" type="button" data-filter="codegen" aria-pressed="false">DBC / ARXML</button>
+          <button class="filter" type="button" data-filter="testing" aria-pressed="false">SIL / testing</button>
+          <button class="filter" type="button" data-filter="debugging" aria-pressed="false">Debugging</button>
+          <button class="filter" type="button" data-filter="quality" aria-pressed="false">Quality &amp; MISRA</button>
+          <button class="filter" type="button" data-filter="aspice" aria-pressed="false">ASPICE</button>
         </div>
 
         <p class="visually-hidden" role="status" aria-live="polite" data-filter-status></p>
 
         <div class="project-grid">
-          <article class="project surface surface--glow" data-tags="j1939 bsw" data-tilt="3" data-reveal>
+          <article class="project surface surface--glow" data-tags="codegen" data-tilt="3" data-reveal>
             <div class="project__head">
-              <h2 class="project__title">MPC4 Commercial Vehicle J1939 Platform</h2>
-              <span class="chip chip--accent">Feb 2026 – Present</span>
+              <h2 class="project__title">Automated DBC / ARXML Validator &amp; Code-Gen</h2>
+              <a class="text-link" href="https://github.com/ritika-kulkarni/Automated-DBC-ARXML-Validator-Code-Gen-Pipeline" target="_blank" rel="noreferrer">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
             </div>
             <p class="project__desc">
-              Analyzed public and private CAN network matrices for a commercial truck platform;
-              authored J1939-compliant COM DBCs covering 40+ PGNs; configured J1939TP, J1939Dcm, and
-              J1939Nm in EB Tresos; and mapped VehicleInput / VehicleOutput SWC interfaces through the
-              DADDY AUTOSAR toolchain.
+              CI and git-hook pipeline that validates DBC and AUTOSAR ARXML (overlaps, endianness,
+              port/interface refs), matches DOORS exports, and generates RTE-style C stubs and interface maps.
             </p>
             <p class="project__impact">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
               </svg>
-              <span><strong>Impact:</strong> full protocol compliance in CANoe — zero Sev-1 defects post-integration; ~30% faster config review with AI-assisted DBC analysis.</span>
+              <span><strong>Impact:</strong> catches signal packing and SWC interface mismatches before Tresos or compile time.</span>
             </p>
             <div class="project__foot">
-              <span class="chip">J1939</span>
-              <span class="chip">EB Tresos</span>
-              <span class="chip">CANoe</span>
-              <span class="chip">IBM DOORS</span>
+              <span class="chip">Python</span>
+              <span class="chip">DBC</span>
+              <span class="chip">ARXML</span>
+              <span class="chip">DOORS</span>
+              <span class="chip">CI/CD</span>
             </div>
           </article>
 
-          <article class="project surface surface--glow" data-tags="adas bsw quality" data-tilt="3" data-reveal>
+          <article class="project surface surface--glow" data-tags="debugging" data-tilt="3" data-reveal>
             <div class="project__head">
-              <h2 class="project__title">Volkswagen USS-Based Parking ADAS</h2>
-              <span class="chip chip--accent">Jul 2023 – Jan 2026</span>
+              <h2 class="project__title">Lauterbach Trace32 Crash Dump Analyzer</h2>
+              <a class="text-link" href="https://github.com/ritika-kulkarni/Automated-Lauterbach-Trace32-Crash-Dump-Log-Analyzer" target="_blank" rel="noreferrer">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
             </div>
             <p class="project__desc">
-              Configured COM, ComM, PduR, CanIf, CanTp, NM, Dem, Dcm, NvM, and RTE for ADAS ECUs on
-              EVO_MBQBL and MEB_UNECE variants. Authored SWC port interfaces and DBC TX/RX mappings
-              covering 60+ CAN signals, with end-to-end confirmation via CANoe traces.
+              Turns Trace32 post-mortem captures into attributed AUTOSAR BSW incident reports —
+              ELF/DWARF symbolication, weighted root-cause classification (CanTp, NvM, OS, …), and
+              optional Jira / Bitbucket publishing.
             </p>
             <p class="project__impact">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
               </svg>
-              <span><strong>Impact:</strong> zero critical signal-loss defects in system integration across two product variants.</span>
-            </p>
-            <div class="project__foot">
-              <span class="chip">AUTOSAR Classic</span>
-              <span class="chip">ADAS USS</span>
-              <span class="chip">RTE</span>
-              <span class="chip">CANoe</span>
-            </div>
-          </article>
-
-          <article class="project surface surface--glow" data-tags="quality adas" data-tilt="3" data-reveal>
-            <div class="project__head">
-              <h2 class="project__title">ASIL-Aware Defect Resolution</h2>
-              <span class="chip chip--accent">ADAS program</span>
-            </div>
-            <p class="project__desc">
-              Resolved 25+ change requests and internal BSW defects by analysing Lauterbach Trace32
-              logs and COM-layer traces, with root-cause discipline that raised first-time-fix rate
-              from 60% to 85% over two release cycles.
-            </p>
-            <p class="project__impact">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
-              </svg>
-              <span><strong>Impact:</strong> +25 pts first-time-fix improvement across two software drops.</span>
+              <span><strong>Impact:</strong> hours of manual PC/LR/SP correlation replaced by automated MD/JSON incident packs.</span>
             </p>
             <div class="project__foot">
               <span class="chip">Trace32</span>
-              <span class="chip">COM RCA</span>
-              <span class="chip">ASIL</span>
-              <span class="chip">Change requests</span>
+              <span class="chip">ELF</span>
+              <span class="chip">Python</span>
+              <span class="chip">AUTOSAR</span>
             </div>
           </article>
 
-          <article class="project surface surface--glow" data-tags="quality bsw" data-tilt="3" data-reveal>
+          <article class="project surface surface--glow" data-tags="testing codegen" data-tilt="3" data-reveal>
             <div class="project__head">
-              <h2 class="project__title">Coverage, Static Analysis &amp; ASPICE</h2>
-              <span class="chip chip--accent">Process</span>
+              <h2 class="project__title">SIL / Virtual ECU Test Harness</h2>
+              <a class="text-link" href="https://github.com/ritika-kulkarni/SIL-Virtual-ECU-vECU-Automated-Test-Harness" target="_blank" rel="noreferrer">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
             </div>
             <p class="project__desc">
-              Executed SSM, GTest, and unit suites to &gt;90% MC/DC on communication modules; cleared
-              100+ Polyspace and QAC findings including MISRA C:2012 mandatorys; maintained DOORS →
-              RQM traceability supporting ASPICE audit with zero open process non-conformances.
+              Software-in-the-Loop harness with a stub COM / PduR / CanIf + J1939 stack on Linux/WSL.
+              Runs fault-injection scenarios (frame drop, bus-off, TP retransmit) on every PR with
+              GTest, gcov, and HTML reports.
             </p>
             <p class="project__impact">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
               </svg>
-              <span><strong>Impact:</strong> audit-ready quality evidence without open ASPICE findings.</span>
+              <span><strong>Impact:</strong> regression without waiting on HIL benches or target MCUs.</span>
             </p>
             <div class="project__foot">
+              <span class="chip">SIL</span>
+              <span class="chip">Docker</span>
+              <span class="chip">J1939</span>
               <span class="chip">GTest</span>
-              <span class="chip">Polyspace</span>
+            </div>
+          </article>
+
+          <article class="project surface surface--glow" data-tags="quality" data-tilt="3" data-reveal>
+            <div class="project__head">
+              <h2 class="project__title">MISRA / Static Analysis Triage Dashboard</h2>
+              <a class="text-link" href="https://github.com/ritika-kulkarni/Automated-Static-Analysis-MISRA-Triage-Dashboard" target="_blank" rel="noreferrer">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+            <p class="project__desc">
+              Baseline-aware Polyspace / QAC triage gate: parses SARIF and vendor XML, diffs new
+              violations against accepted debt, fails CI on new MISRA Mandatory or ASIL-C/D findings,
+              and opens owner-mapped Jira tickets.
+            </p>
+            <p class="project__impact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+              </svg>
+              <span><strong>Impact:</strong> noisy static-analysis drops become a clean merge gate with attributed tickets.</span>
+            </p>
+            <div class="project__foot">
               <span class="chip">MISRA C</span>
-              <span class="chip">ASPICE L2</span>
+              <span class="chip">Polyspace</span>
+              <span class="chip">QAC</span>
+              <span class="chip">Jira</span>
             </div>
           </article>
 
-          <article class="project surface surface--glow" data-tags="j1939 bsw" data-tilt="3" data-reveal>
+          <article class="project surface surface--glow" data-tags="aspice quality" data-tilt="3" data-reveal>
             <div class="project__head">
-              <h2 class="project__title">Address Claiming &amp; Multi-ECU Mapping</h2>
-              <span class="chip chip--accent">CV platform</span>
+              <h2 class="project__title">Continuous Traceability Matrix Generator</h2>
+              <a class="text-link" href="https://github.com/ritika-kulkarni/Continuous-Traceability-Matrix-Generator-DOORS-Git-RQM-Codebeamer-" target="_blank" rel="noreferrer">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
             </div>
             <p class="project__desc">
-              Documented Address Claiming and Source Address allocation per J1939-81, enabling
-              plug-and-play node management across three ECU variants, with VGI signal cross-checks
-              against IBM DOORS for 100% requirements-to-implementation traceability.
+              ASPICE L2/L3 sync across DOORS, Git, RQM, and Codebeamer — PR gates on requirement tags
+              and linked tests, plus nightly audit-ready HTML/PDF matrices for release builds.
             </p>
             <p class="project__impact">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
               </svg>
-              <span><strong>Impact:</strong> standardised node management across 3 ECU variants with full DOORS linkage.</span>
+              <span><strong>Impact:</strong> replaces drift-prone spreadsheet traceability with a living ALM graph.</span>
             </p>
             <div class="project__foot">
-              <span class="chip">J1939-81</span>
-              <span class="chip">VGI</span>
+              <span class="chip">ASPICE</span>
               <span class="chip">DOORS</span>
-              <span class="chip">Multi-ECU</span>
-            </div>
-          </article>
-
-          <article class="project surface surface--glow" data-tags="adas" data-tilt="3" data-reveal>
-            <div class="project__head">
-              <h2 class="project__title">iBuzz Driver Safety Monitoring</h2>
-              <span class="chip chip--accent">Academic · 2023</span>
-            </div>
-            <p class="project__desc">
-              National-level INCEPTRA 2023 project — IoT sensor-based driver safety monitoring with
-              real-time alerting. Placed 2nd nationally and remains a relevant foundation for later
-              ADAS domain work.
-            </p>
-            <p class="project__impact">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
-              </svg>
-              <span><strong>Impact:</strong> 2nd place, INCEPTRA 2023 National Level Project Exhibition.</span>
-            </p>
-            <div class="project__foot">
-              <span class="chip">IoT</span>
-              <span class="chip">Driver safety</span>
-              <span class="chip">BIT</span>
-              <span class="chip">Exhibition</span>
+              <span class="chip">RQM</span>
+              <span class="chip">Codebeamer</span>
             </div>
           </article>
         </div>
@@ -284,12 +287,12 @@
         <div class="cta surface surface--glass surface--xl" data-reveal="scale">
           <div class="cta__copy">
             <p class="eyebrow">Next</p>
-            <h2>Want the role context behind these programs?</h2>
-            <p class="body-dim">The experience timeline covers Bosch BGSW, skills, education, and certifications.</p>
+            <h2>Want the production context behind these tools?</h2>
+            <p class="body-dim">The experience timeline covers Bosch BGSW programs, skills, and certifications.</p>
           </div>
           <div class="cluster">
             <a class="button button--primary" href="experience.html" data-magnetic="6">View experience</a>
-            <a class="button" href="Ritika_Kulkarni_resume.pdf" download data-magnetic="5">Download résumé</a>
+            <a class="button" href="https://github.com/ritika-kulkarni" target="_blank" rel="noreferrer" data-magnetic="5">Open GitHub</a>
           </div>
         </div>
       </section>
@@ -302,7 +305,7 @@
         <a href="about.html">About</a>
         <a href="experience.html">Experience</a>
         <a href="contact.html">Contact</a>
-        <a href="https://github.com/Ritikakulkarni14" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/ritika-kulkarni" target="_blank" rel="noreferrer">GitHub</a>
       </nav>
       <p class="site-footer__meta">
         <span class="pulse-dot" aria-hidden="true"></span>

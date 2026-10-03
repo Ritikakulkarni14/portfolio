@@ -10,7 +10,7 @@ Visual system mirrored from [iamsudeep.in](https://iamsudeep.in/).
 | --- | --- |
 | `index.html` | Hero, stack console, impact metrics, section links |
 | `about.html` | Approach, four engineering principles, core strengths |
-| `projects.html` | Six projects with discipline filters |
+| `projects.html` | Five GitHub tooling projects with discipline filters |
 | `experience.html` | Bosch timeline, skill groups, education & certifications |
 | `contact.html` | Client-side compose form, contact details |
 
@@ -23,20 +23,9 @@ python3 -m http.server 4321 --bind 127.0.0.1
 
 ## Deploy to GitHub Pages
 
-Repo: [Ritikakulkarni14/portfolio](https://github.com/Ritikakulkarni14/portfolio)
+Profile: [github.com/ritika-kulkarni](https://github.com/ritika-kulkarni)
 
-```bash
-git init
-git add .
-git commit -m "Add Ritika Kulkarni portfolio"
-git branch -M main
-git remote add origin https://github.com/Ritikakulkarni14/portfolio.git
-git push -u origin main
-```
-
-Then: **Settings → Pages → Source = GitHub Actions**.
-
-Live URL: https://ritikakulkarni14.github.io/portfolio/
+Live site (Vercel): https://ritika-kulkarni-portfolio.vercel.app
 
 ## Notes
 
